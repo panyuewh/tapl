@@ -91,9 +91,9 @@ let main () =
 
 let () = set_max_boxes 1000
 let () = set_margin 67
-let res () = 
+let res = 
     try main();0 
     with Exit x -> x 
   
 let () = print_flush()
-let () = exit (res ())
+let () = exit res 
