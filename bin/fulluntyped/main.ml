@@ -73,7 +73,6 @@ and process_command ctx cmd = match cmd with
       force_newline();
       ctx
   | Bind(fi,x,bind) -> 
-      
       let bind' = evalbinding ctx bind in
       pr x; pr " "; prbinding ctx bind'; force_newline();
       addbinding ctx x bind'
