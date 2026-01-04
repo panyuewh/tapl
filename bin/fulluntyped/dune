@@ -1,0 +1,14 @@
+(ocamllex lexer)
+(menhir
+ (modules parser))
+
+(env
+  (dev
+    (flags (:standard -w -27-32-33-34-39))))
+
+(cram
+ (deps %{bin:fulluntyped}))
+
+(executable
+ (public_name fulluntyped)
+ (name main))
